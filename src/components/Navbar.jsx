@@ -1,45 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100">
-  <div className="flex-1">
-    <a className="btn btn-ghost normal-case font-bold text-2xl">Ashik Faysal</a>
-  </div>
-  <div className="flex-none gap-2">
-    <div className="form-control">
-      <input
-        type="text"
-        placeholder="Search"
-        className="input input-bordered w-24 md:w-auto"
-      />
-    </div>
-    <div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <div className="md:flex justify-between my-12 bg-base-200 h-24 items-center rounded-lg">
+        <div>
+          <button className="btn btn-ghost text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-purple-500 to-yellow-500">
+            Ashik Faysal
+          </button>
         </div>
-      </label>
-      <ul
-        tabIndex={0}
-        className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-      >
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li>
-          <a>Settings</a>
-        </li>
-        <li>
-          <a>Logout</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+        <div className="md:flex gap-4">
+          <button className="btn btn-outline">
+            <Link to="/">Home</Link>
+          </button>
+          <button className="btn btn-outline">
+            <Link to="/whatIDo">About</Link>
+          </button>
+          <button className="btn btn-outline">
+            <Link to="/skills">Skills</Link>
+          </button>
+          <button className="btn btn-outline">
+            <Link to="/contact">Contact</Link>
+          </button>
+        </div>
+        <div>
+          <button className="btn btn-outline  text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-purple-500 to-yellow-500">
+            <Link>Download Resume</Link>
+          </button>
+        </div>
+      </div>
     );
 };
 
