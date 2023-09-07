@@ -1,11 +1,13 @@
-import React from 'react';
+import DynamicProgressBar from "./DynamicProgressBar ";
+
 
 const MySkills = () => {
-    return (
-        <div>
-            <h1>This i s my skill section.</h1>
-        </div>
-    );
+  return (
+    <div>
+      <h1>Skills Progress</h1>
+      <DynamicProgressBar htmlProgress={95} cssProgress={90} jsProgress={80} />
+    </div>
+  );
 };
 
 export default MySkills;

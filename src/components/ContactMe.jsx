@@ -1,44 +1,105 @@
-import React from "react";
+import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
+import { MdMessage } from "react-icons/md";
+import React, { useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
-const ContactMe = () => {
+export const ContactMe = () => {
+  const form = useRef();
+    const hiddenSubmitButton = useRef();
+
+    useEffect(() => {
+      const handleKeyPress = (event) => {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          hiddenSubmitButton.current.click(); // Trigger form submission
+        }
+      };
+
+      document.addEventListener("keydown", handleKeyPress);
+
+      return () => {
+        document.removeEventListener("keydown", handleKeyPress);
+      };
+    }, []);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_redx5eh",
+        "template_kp5om1f",
+        form.current,
+        "gpkZCEPYfcM9yn15X"
+      )
+      .then(
+        (result) => {
+          // console.log(result.text);
+          if (result.text === "OK") {
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Your mail has been sent successfully. Thanks ❤",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            form.current.reset();
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
-    <div className="grid md:grid-cols-2 gap-16 my-24">
-      <div className="md:p-24 font-bold">
-        <h2 className="text-3xl">Contact Me</h2>
-        <div className="flex flex-col gap-6">
-          <div>
-            <h4 className="text-2xl font-bold">Phone</h4>
-            <p>+8801758777516</p>
-          </div>
-          <div>
-            <h4 className="text-2xl font-bold">Email</h4>
-            <p>ashikfaysal.rc@gmail.com</p>
-          </div>
-          <div>
-            <h4 className="text-2xl font-bold">Location</h4>
-            <p>Rajshahi, Bangladesh</p>
-          </div>
+    <div className="bg-black p-6 ">
+      <div data-aos="zoom-out-down" className="text-center mb-3 ">
+        <h2 className="">
+          <>"Get in touch"</>
+        </h2>
+        <h2 className="text-2xl green">Contact Me</h2>
+      </div>
+      <form ref={form} onSubmit={sendEmail}>
+        <div className="flex items-center mb-4">
+          <AiOutlineUser className="text-white mr-2" />
+          <input
+            type="text"
+            name="user_name"
+            className="bg-black text-white p-2 border-b w-full border-white focus:outline-none focus:border-gray-500"
+            placeholder="Your Name"
+            required
+          />
         </div>
-      </div>
-      <div className="md:p-24 flex flex-col gap-6">
-        <input
-          type="text"
-          placeholder="Full Name"
-          className="input input-bordered input-primary w-full max-w-xs"
-        />
-        <input
-          type="email"
-          placeholder="Your Email"
-          className="input input-bordered input-primary w-full max-w-xs"
-        />
-        <input
-          className="textarea w-full max-w-xs h-48 textarea-primary block"
-          placeholder="Your Message"
-        />
-        <button className="my-4 w-full max-w-xs bg-gradient-to-r from-base-100 to-blue-500 hover:from-pink-500 hover:to-yellow-500 btn">
-          Sen Message
+        <div className="flex items-center mb-4">
+          <AiOutlineMail className="text-white mr-2" />
+          <input
+            type="email"
+            name="user_email"
+            className="bg-black text-white p-2 border-b w-full border-white focus:outline-none focus:border-gray-500"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+        <div className="flex items-center mb-4">
+          <MdMessage className="text-white mr-2" />
+          <textarea
+            className="bg-black text-white p-2 border-b w-full border-white focus:outline-none focus:border-gray-500"
+            placeholder="Message"
+            name="message"
+            rows="4"
+            required
+          />
+        </div>
+        <button
+          className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark"
+          type="submit"
+          ref={hiddenSubmitButton} // Hidden submit button
+        >
+          Send
         </button>
-      </div>
+      </form>
     </div>
   );
 };
