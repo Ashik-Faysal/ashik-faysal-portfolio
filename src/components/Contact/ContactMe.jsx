@@ -6,22 +6,22 @@ import Swal from "sweetalert2";
 
 export const ContactMe = () => {
   const form = useRef();
-    const hiddenSubmitButton = useRef();
+  const hiddenSubmitButton = useRef();
 
-    useEffect(() => {
-      const handleKeyPress = (event) => {
-        if (event.key === "Enter" && !event.shiftKey) {
-          event.preventDefault();
-          hiddenSubmitButton.current.click(); // Trigger form submission
-        }
-      };
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        hiddenSubmitButton.current.click(); // Trigger form submission
+      }
+    };
 
-      document.addEventListener("keydown", handleKeyPress);
+    document.addEventListener("keydown", handleKeyPress);
 
-      return () => {
-        document.removeEventListener("keydown", handleKeyPress);
-      };
-    }, []);
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -35,7 +35,6 @@ export const ContactMe = () => {
       )
       .then(
         (result) => {
-          // console.log(result.text);
           if (result.text === "OK") {
             Swal.fire({
               position: "center",
@@ -54,12 +53,12 @@ export const ContactMe = () => {
   };
 
   return (
-    <div className="bg-black p-6 ">
+    <div className="bg-black p-6 transition-transform transform ">
       <div data-aos="zoom-out-down" className="text-center mb-3 ">
         <h2 className="">
           <>"Get in touch"</>
         </h2>
-        <h2 className="text-2xl green">Contact Me</h2>
+        <h2 className="text-4xl font-bold green">Contact Me</h2>
       </div>
       <form ref={form} onSubmit={sendEmail}>
         <div className="flex items-center mb-4">
@@ -93,7 +92,7 @@ export const ContactMe = () => {
           />
         </div>
         <button
-          className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark"
+          className="flex mx-auto bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-transform transform hover:scale-105"
           type="submit"
           ref={hiddenSubmitButton} // Hidden submit button
         >

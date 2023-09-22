@@ -4,9 +4,10 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Main from "./components/Main.jsx";
 import Home from "./components/Home";
-import About from "./components/About";
+import About from "./components/About/About";
 import WhatIDo from "./components/WhatIDo";
-import ContactMe from "./components/ContactMe";
+import MySkills from "./components/MySkills";
+import ContactMe from "./components/Contact/ContactMe";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element:<ContactMe/>
+        element: <ContactMe />,
+      },
+      {
+        path: "/skills",
+        element: <MySkills />,
       },
     ],
   },
