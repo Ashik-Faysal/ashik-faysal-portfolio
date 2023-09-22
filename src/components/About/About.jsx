@@ -72,7 +72,7 @@ const About = () => {
         </span>
       </div>
       <div className="avatar">
-        <div className="md:w-4/6 w-full rounded-full ring mb-12 md:mb-0 ring-primary ring-offset-base-100 ring-offset-2 md:ml-auto">
+        <div className="md:w-4/6 w-full rounded-full ring mb-12 md:mb-0 ring-primary ring-offset-base-100 ring-offset-2 md:mx-auto">
           <img src={MyImage} alt="Ashik Faysal" />
         </div>
       </div>
