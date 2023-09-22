@@ -52,7 +52,7 @@ const About = () => {
   }, [currentRoleIndex, animationDirection]);
 
   return (
-    <div className="grid md:grid-cols-2 gap-16 justify-around mt-4 mb-4 md:mb-24">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-between mt-4 mb-4 md:mb-24">
       <div className="px-2 md:px-24">
         <h1 className="text-6xl">
           <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-purple-500 to-yellow-500">
@@ -72,7 +72,7 @@ const About = () => {
         </span>
       </div>
       <div className="avatar">
-        <div className="w-4/6 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <div className="md:w-4/6 w-full rounded-full ring mb-12 md:mb-0 ring-primary ring-offset-base-100 ring-offset-2 md:ml-auto">
           <img src={MyImage} alt="Ashik Faysal" />
         </div>
       </div>
