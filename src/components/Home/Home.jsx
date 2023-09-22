@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import About from "./About/About";
-import WhatIDo from "./WhatIDo";
-import MySkills from "./MySkills";
+import About from "../About/About";
+import WhatIDo from "../WhatIDo/WhatIDo";
+import MySkills from "../Skills/MySkills";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ContactMe from "./Contact/ContactMe";
+import ContactMe from "../Contact/ContactMe";
 
 gsap.registerPlugin(ScrollTrigger);
 
