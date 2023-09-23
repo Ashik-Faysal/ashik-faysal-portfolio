@@ -3,6 +3,8 @@ import { MdMessage } from "react-icons/md";
 import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import { Zoom } from "react-awesome-reveal";
+
 
 export const ContactMe = () => {
   const form = useRef();
@@ -53,53 +55,55 @@ export const ContactMe = () => {
   };
 
   return (
-    <div className="bg-black p-6 transition-transform transform ">
-      <div data-aos="zoom-out-down" className="text-center mb-3 ">
-        <h2 className="">
-          <>"Get in touch"</>
-        </h2>
-        <h2 className="text-4xl font-bold green">Contact Me</h2>
+    <Zoom>
+      <div className="bg-black p-6 transition-transform transform ">
+        <div data-aos="zoom-out-down" className="text-center mb-3 ">
+          <h2 className="">
+            <>"Get in touch"</>
+          </h2>
+          <h2 className="text-4xl font-bold green">Contact Me</h2>
+        </div>
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="flex items-center mb-4">
+            <AiOutlineUser className="text-white mr-2" />
+            <input
+              type="text"
+              name="user_name"
+              className="bg-black text-white p-2 border-b w-full border-white focus:outline-none focus:border-gray-500"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div className="flex items-center mb-4">
+            <AiOutlineMail className="text-white mr-2" />
+            <input
+              type="email"
+              name="user_email"
+              className="bg-black text-white p-2 border-b w-full border-white focus:outline-none focus:border-gray-500"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div className="flex items-center mb-4">
+            <MdMessage className="text-white mr-2" />
+            <textarea
+              className="bg-black text-white p-2 border-b w-full border-white focus:outline-none focus:border-gray-500"
+              placeholder="Message"
+              name="message"
+              rows="4"
+              required
+            />
+          </div>
+          <button
+            className="flex mx-auto bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-transform transform hover:scale-105"
+            type="submit"
+            ref={hiddenSubmitButton} // Hidden submit button
+          >
+            Send
+          </button>
+        </form>
       </div>
-      <form ref={form} onSubmit={sendEmail}>
-        <div className="flex items-center mb-4">
-          <AiOutlineUser className="text-white mr-2" />
-          <input
-            type="text"
-            name="user_name"
-            className="bg-black text-white p-2 border-b w-full border-white focus:outline-none focus:border-gray-500"
-            placeholder="Your Name"
-            required
-          />
-        </div>
-        <div className="flex items-center mb-4">
-          <AiOutlineMail className="text-white mr-2" />
-          <input
-            type="email"
-            name="user_email"
-            className="bg-black text-white p-2 border-b w-full border-white focus:outline-none focus:border-gray-500"
-            placeholder="Email Address"
-            required
-          />
-        </div>
-        <div className="flex items-center mb-4">
-          <MdMessage className="text-white mr-2" />
-          <textarea
-            className="bg-black text-white p-2 border-b w-full border-white focus:outline-none focus:border-gray-500"
-            placeholder="Message"
-            name="message"
-            rows="4"
-            required
-          />
-        </div>
-        <button
-          className="flex mx-auto bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-transform transform hover:scale-105"
-          type="submit"
-          ref={hiddenSubmitButton} // Hidden submit button
-        >
-          Send
-        </button>
-      </form>
-    </div>
+    </Zoom>
   );
 };
 

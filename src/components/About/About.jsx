@@ -54,7 +54,7 @@ const About = () => {
   return (
     <div className="flex flex-col-reverse md:flex-row items-center justify-between mt-4 mb-4 md:mb-24">
       <div className="px-2 md:px-24">
-        <h1 className="text-6xl">
+        <h1 className="text-4xl h-36">
           <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-purple-500 to-yellow-500">
             Ashik Faysal
           </span>
