@@ -1,0 +1,14 @@
+[
+  { "name": "HTML", "percentage": 95, "image": "html.png" },
+  { "name": "CSS", "percentage": 90, "image": "css.png" },
+  { "name": "JavaScript", "percentage": 85, "image": "javascript.png" },
+  { "name": "React", "percentage": 80, "image": "react.png" },
+  { "name": "Bootstrap", "percentage": 85, "image": "bootstrap.png" },
+  { "name": "Tailwind css", "percentage": 95, "image": "tailwind.png" },
+  { "name": "Firebase", "percentage": 95, "image": "firebase.png" },
+  { "name": "Node.js", "percentage": 85, "image": "nodejs.png" },
+  { "name": "MongoDB", "percentage": 85, "image": "mongodb.png" },
+  { "name": "Express.js", "percentage": 85, "image": "express.png" },
+  { "name": "Stripe", "percentage": 75, "image": "stripe.png" },
+  { "name": "Redux", "percentage": 50, "image": "redux.png" }
+]

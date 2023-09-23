@@ -5,7 +5,7 @@ import Footer from '../Shared/Footer';
 
 const Main = () => {
     return (
-      <div className="md:mx-24">
+      <div className="md:mx-24 bg-[#05445E]">
         <Navbar />
         <Outlet />
         <Footer />
