@@ -1,14 +1,67 @@
 [
-  { "name": "HTML", "percentage": 95, "image": "html.png" },
-  { "name": "CSS", "percentage": 90, "image": "css.png" },
-  { "name": "JavaScript", "percentage": 85, "image": "javascript.png" },
-  { "name": "React", "percentage": 80, "image": "react.png" },
-  { "name": "Bootstrap", "percentage": 85, "image": "bootstrap.png" },
-  { "name": "Tailwind css", "percentage": 95, "image": "tailwind.png" },
-  { "name": "Firebase", "percentage": 95, "image": "firebase.png" },
-  { "name": "Node.js", "percentage": 85, "image": "nodejs.png" },
-  { "name": "MongoDB", "percentage": 85, "image": "mongodb.png" },
-  { "name": "Express.js", "percentage": 85, "image": "express.png" },
-  { "name": "Stripe", "percentage": 75, "image": "stripe.png" },
-  { "name": "Redux", "percentage": 50, "image": "redux.png" }
+  {
+    "name": "HTML",
+    "percentage": 95,
+    "image": "https://e7.pngegg.com/pngimages/63/313/png-clipart-html-computer-icons-world-wide-web-text-logo-thumbnail.png"
+  },
+  {
+    "name": "CSS",
+    "percentage": 90,
+    "image": "https://e7.pngegg.com/pngimages/603/759/png-clipart-css3-cascading-style-sheets-logo-html-world-wide-web-blue-angle-thumbnail.png"
+  },
+  {
+    "name": "JavaScript",
+    "percentage": 85,
+    "image": "https://e7.pngegg.com/pngimages/640/199/png-clipart-javascript-logo-html-javascript-logo-angle-text-thumbnail.png"
+  },
+  {
+    "name": "React",
+    "percentage": 80,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/539px-React-icon.svg.png"
+  },
+  {
+    "name": "Bootstrap",
+    "percentage": 85,
+    "image": "https://e7.pngegg.com/pngimages/162/309/png-clipart-bootstrap-responsive-web-design-web-development-logo-django-others-miscellaneous-purple-thumbnail.png"
+  },
+  {
+    "name": "Tailwind css",
+    "percentage": 95,
+    "image": "https://www.svgrepo.com/show/374118/tailwind.svg"
+  },
+  {
+    "name": "Firebase",
+    "percentage": 95,
+    "image": "https://sujanbyanjankar.com.np/wp-content/uploads/2018/09/firebase_logo_shot.png"
+  },
+  {
+    "name": "Node.js",
+    "percentage": 85,
+    "image": "https://e7.pngegg.com/pngimages/306/37/png-clipart-node-js-logo-node-js-javascript-web-application-express-js-computer-software-others-miscellaneous-text-thumbnail.png"
+  },
+  {
+    "name": "MongoDB",
+    "percentage": 85,
+    "image": "https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png"
+  },
+  {
+    "name": "Express.js",
+    "percentage": 85,
+    "image": "https://res.cloudinary.com/practicaldev/image/fetch/s--YbV36HLj--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/hpg6if7btrwilqkidqbe.png"
+  },
+  {
+    "name": "Stripe",
+    "percentage": 75,
+    "image": "https://images.ctfassets.net/fzn2n1nzq965/3AGidihOJl4nH9D1vDjM84/9540155d584be52fc54c443b6efa4ae6/homepage.png?q=80"
+  },
+  {
+    "name": "Redux",
+    "percentage": 50,
+    "image": "https://img.stackshare.io/service/7374/react-redux.png"
+  },
+  {
+    "name": "Next.js",
+    "percentage": 80,
+    "image": "https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp"
+  }
 ]
