@@ -3,6 +3,7 @@ import WhatIDo from "../WhatIDo/WhatIDo";
 import MySkills from "../Skills/MySkills";
 import ContactMe from "../Contact/ContactMe";
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
+import MyProject from "../Projects/MyProject";
 
 const Home = () => {
 
@@ -18,8 +19,12 @@ const Home = () => {
         <MySkills />
       </Slide>
       <Zoom className="my-4">
-        <ContactMe />
+        <MyProject />
       </Zoom>
+      <Slide className="my-4">
+        <ContactMe />
+      </Slide>
+     
     </div>
   );
 };

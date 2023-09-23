@@ -8,6 +8,7 @@ import WhatIDo from "./components/WhatIDo/WhatIDo";
 import MySkills from "./components/Skills/MySkills";
 import ContactMe from "./components/Contact/ContactMe";
 import Main from "./components/Main/Main";
+import MyProject from "./components/Projects/MyProject";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/skills",
         element: <MySkills />,
+      },
+      {
+        path: "/projects",
+        element: <MyProject />,
       },
     ],
   },

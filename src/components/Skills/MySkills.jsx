@@ -18,7 +18,6 @@ import SkillBar from "./SkillBar";
       .then((res) => res.json())
       .then((data) => {
         // Set the fetched data in the state
-        console.log(data);
         setSkills(data);
       })
       .catch((error) => {
